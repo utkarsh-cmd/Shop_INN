@@ -90,6 +90,8 @@
     "minimatch": "^3.0.4",
     "minimist": "^1.2.5",
     "mongoose": "^5.10.14",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
     "nopt": "^1.0.10",
     "normalize-package-data": "^2.5.0",
     "normalize-path": "^3.0.0",
@@ -165,7 +167,8 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d"
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "utkarsh",
   "license": "ISC"
